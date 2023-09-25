@@ -1,0 +1,51 @@
+* > * {
+  margin: inherit;
+  padding: inherit;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto 1fr 1fr;
+}
+
+.segment span,
+.inner span {
+  color: black;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.inner span {
+  align-self: center;
+  place-self: center;
+}
+
+.segment {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.segment button {
+  background-color: transparent;
+  border: solid black 1px;
+  border-radius: 2px;
+}
+
+.segment button:hover {
+  background-color: #c4c4c4;
+}

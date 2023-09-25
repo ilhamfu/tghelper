@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="inner" x-data="clock">
+        <div class="segment">
+          <button type="button" class="up" @click="add_ten_hours">^</button>
+          <span x-text="ten_hours">0</span>
+          <button type="button" class="down" @click="sub_ten_hours">v</button>
+        </div>
+        <div class="segment">
+          <button type="button" class="up" @click="add_hour">^</button>
+          <span x-text="hour">0</span>
+          <button type="button" class="down" @click="sub_hour">v</button>
+        </div>
+        <span>:</span>
+        <div class="segment">
+          <button type="button" class="up" @click="add_ten_minutes">^</button>
+          <span x-text="ten_minutes">0</span>
+          <button type="button" class="down" @click="sub_ten_minutes">v</button>
+        </div>
+        <div class="segment">
+          <button type="button" class="up" @click="add_minute">^</button>
+          <span x-text="minute">0</span>
+          <button type="button" class="down" @click="sub_minute">v</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
