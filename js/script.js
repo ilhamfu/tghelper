@@ -3,6 +3,8 @@ const DEFAULT_MIN_MINUTES = 0;
 
 
 document.addEventListener("alpine:init", () => {
+  Telegram.MainButton.show();
+  Telegram.MainButton.enable();
   Telegram.WebApp.ready();
 
   Alpine.data("clock", () => {
