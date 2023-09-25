@@ -3,9 +3,11 @@ const DEFAULT_MIN_MINUTES = 0;
 
 
 document.addEventListener("alpine:init", () => {
+
+  Telegram.WebApp.ready();
+  
   Telegram.MainButton.show();
   Telegram.MainButton.enable();
-  Telegram.WebApp.ready();
 
   Alpine.data("clock", () => {
     let searchParam = new URLSearchParams(window.location.search);
@@ -46,6 +48,7 @@ document.addEventListener("alpine:init", () => {
       },
       submit() {
         Telegram.WebApp.sendData(this._minutes);
+  
       },
       get ten_hours() {
         return Math.floor(this._minutes / 600);
